@@ -1,0 +1,529 @@
+{
+  "id" : "65030010e32b186d40c8fb7f",
+  "cts" : 1694695440566,
+  "mts" : 1694695440566,
+  "createdBy" : "Gautami Kumari",
+  "modifiedBy" : "Gautami Kumari",
+  "kongAdminHost" : "http://34.121.145.236:9001/",
+  "runtime" : "kong-onprem",
+  "workspace" : "default",
+  "swaggerId" : "6499496c84df23510098228c",
+  "serviceName" : "payment-initiation-api",
+  "revision" : 1,
+  "swaggerVersion" : "",
+  "swaggerName" : "Payment Initiation API",
+  "serviceId" : "134af7c3-0aa6-438c-995e-7ee4f76679ba",
+  "service" : {
+    "serviceName" : "payment-initiation-api",
+    "protocol" : "https",
+    "host" : "openbanking.com",
+    "hosts" : [ ],
+    "basePath" : "/open-banking/v3.1/pisp",
+    "basePaths" : [ ],
+    "port" : 80,
+    "ports" : [ ],
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    }
+  },
+  "routes" : [ {
+    "routeName" : "GetInternationalScheduledPaymentsInternationalScheduledPaymentId",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/international-scheduled-payments/(?<InternationalScheduledPaymentId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetDomesticPaymentConsentsConsentIdFundsConfirmation",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/domestic-payment-consents/(?<ConsentId>\\w+/funds-confirmation" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetDomesticStandingOrderConsentsConsentId",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/domestic-standing-order-consents/(?<ConsentId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetInternationalScheduledPaymentConsentsConsentId",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/international-scheduled-payment-consents/(?<ConsentId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetInternationalPaymentConsentsConsentId",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/international-payment-consents/(?<ConsentId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetFilePaymentConsentsConsentId",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/file-payment-consents/(?<ConsentId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "CreateDomesticScheduledPaymentConsents",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/open-banking/v3.1/pisp/domestic-scheduled-payment-consents" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetInternationalPaymentsInternationalPaymentId",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/international-payments/(?<InternationalPaymentId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetDomesticStandingOrdersDomesticStandingOrderId",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/domestic-standing-orders/(?<DomesticStandingOrderId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetInternationalPaymentConsentsConsentIdFundsConfirmation",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/international-payment-consents/(?<ConsentId>\\w+/funds-confirmation" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "CreateInternationalScheduledPaymentConsents",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/open-banking/v3.1/pisp/international-scheduled-payment-consents" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetFilePaymentsFilePaymentId",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/file-payments/(?<FilePaymentId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetDomesticPaymentConsentsConsentId",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/domestic-payment-consents/(?<ConsentId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "CreateDomesticPayments",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/open-banking/v3.1/pisp/domestic-payments" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetInternationalStandingOrdersInternationalStandingOrderPaymentId",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/international-standing-orders/(?<InternationalStandingOrderPaymentId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "CreateDomesticPaymentConsents",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/open-banking/v3.1/pisp/domestic-payment-consents" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "CreateInternationalScheduledPayments",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/open-banking/v3.1/pisp/international-scheduled-payments" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "CreateInternationalStandingOrders",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/open-banking/v3.1/pisp/international-standing-orders" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "CreateDomesticStandingOrders",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/open-banking/v3.1/pisp/domestic-standing-orders" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetFilePaymentsFilePaymentIdReportFile",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/file-payments/(?<FilePaymentId>\\w+/report-file" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "CreateInternationalPayments",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/open-banking/v3.1/pisp/international-payments" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "CreateFilePaymentConsents",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/open-banking/v3.1/pisp/file-payment-consents" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "CreateInternationalStandingOrderConsents",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/open-banking/v3.1/pisp/international-standing-order-consents" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "CreateDomesticStandingOrderConsents",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/open-banking/v3.1/pisp/domestic-standing-order-consents" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetDomesticPaymentsDomesticPaymentId",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/domestic-payments/(?<DomesticPaymentId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "CreateFilePaymentConsentsConsentIdFile",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/file-payment-consents/(?<ConsentId>\\w+/file" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetFilePaymentConsentsConsentIdFile",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/file-payment-consents/(?<ConsentId>\\w+/file" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "CreateDomesticScheduledPayments",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/open-banking/v3.1/pisp/domestic-scheduled-payments" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetDomesticScheduledPaymentConsentsConsentId",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/domestic-scheduled-payment-consents/(?<ConsentId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "CreateInternationalPaymentConsents",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/open-banking/v3.1/pisp/international-payment-consents" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetDomesticScheduledPaymentsDomesticScheduledPaymentId",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/domestic-scheduled-payments/(?<DomesticScheduledPaymentId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "GetInternationalStandingOrderConsentsConsentId",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/open-banking/v3.1/pisp/international-standing-order-consents/(?<ConsentId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "CreateFilePayments",
+    "service" : {
+      "id" : "134af7c3-0aa6-438c-995e-7ee4f76679ba"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/open-banking/v3.1/pisp/file-payments" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  } ],
+  "plugins" : [ ]
+}
