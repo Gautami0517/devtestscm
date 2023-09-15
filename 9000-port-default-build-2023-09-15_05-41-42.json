@@ -1,0 +1,94 @@
+{
+  "id" : "6503ee96617abf7679a13ab4",
+  "cts" : 1694756502021,
+  "mts" : 1694756502021,
+  "createdBy" : "vidya.wiz vidya.wiz",
+  "modifiedBy" : "vidya.wiz vidya.wiz",
+  "kongAdminHost" : "http://34.121.145.236:9001/",
+  "runtime" : "9000-port",
+  "workspace" : "default",
+  "swaggerId" : "63adfbd20fcbc31d8cbebd28",
+  "serviceName" : "asset-management",
+  "revision" : 4,
+  "swaggerVersion" : "",
+  "swaggerName" : "Asset Management",
+  "serviceId" : "3c0dbe23-6113-46c9-8c39-1e2bfede0459",
+  "service" : {
+    "serviceName" : "asset-management",
+    "protocol" : "https",
+    "host" : "34.121.145.236",
+    "hosts" : [ ],
+    "basePath" : "/v1/acme/asset",
+    "basePaths" : [ ],
+    "port" : 9081,
+    "ports" : [ ],
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    }
+  },
+  "routes" : [ {
+    "routeName" : "registerCustomerAsset",
+    "service" : {
+      "id" : "3c0dbe23-6113-46c9-8c39-1e2bfede0459"
+    },
+    "protocols" : [ "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/v1/acme/asset/" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "getCustomerAsset",
+    "service" : {
+      "id" : "3c0dbe23-6113-46c9-8c39-1e2bfede0459"
+    },
+    "protocols" : [ "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/v1/acme/asset/" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "deleteAsset",
+    "service" : {
+      "id" : "3c0dbe23-6113-46c9-8c39-1e2bfede0459"
+    },
+    "protocols" : [ "http" ],
+    "methods" : [ "DELETE" ],
+    "paths" : [ "/v1/acme/asset/" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false
+    }
+  } ],
+  "plugins" : [ {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "asset-management",
+    "configs" : {
+      "allow" : [ "devportal-5/sep/2023" ],
+      "hide_groups_header" : true
+    }
+  } ]
+}
