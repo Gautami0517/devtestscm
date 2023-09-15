@@ -1,0 +1,3689 @@
+{
+  "id" : "6504013e4c52c36ee7c9ba25",
+  "cts" : 1694761278686,
+  "createdUserName" : "Gautami Kumari",
+  "mts" : 1694761278686,
+  "swaggerId" : "ece31558d41b4bbd875c2b2fa82b3872",
+  "oasVersion" : "2.0",
+  "swaggerRevision" : 1,
+  "apiId" : "650401404c52c36ee7c9ba27",
+  "revisionId" : "650401404c52c36ee7c9ba26",
+  "name" : "petstore-deva-2",
+  "displayName" : "petstore-deva-2",
+  "description" : "",
+  "apiRevision" : 1,
+  "apiVersion" : 1,
+  "protocols" : [ "https", "http" ],
+  "serviceUrl" : "https://petstore.swagger.io/v2",
+  "path" : "/v2",
+  "subscriptionKeyParameterNames" : {
+    "header" : "Ocp-Apim-Subscription-Key",
+    "query" : "subscription-key"
+  },
+  "subscriptionRequired" : false,
+  "contact" : {
+    "email" : "apiteam@swagger.io"
+  },
+  "license" : {
+    "name" : "Apache 2.0",
+    "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+  },
+  "termsOfServiceUrl" : "http://swagger.io/terms/",
+  "tags" : [ ],
+  "products" : [ ],
+  "isCurrent" : true,
+  "isOnline" : true,
+  "apiOperations" : [ {
+    "name" : "addPet",
+    "displayName" : "addPet",
+    "method" : "post",
+    "urlTemplate" : "/pet",
+    "templateParameters" : [ ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "updatePet",
+    "displayName" : "updatePet",
+    "method" : "put",
+    "urlTemplate" : "/pet",
+    "templateParameters" : [ ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "getUserByName",
+    "displayName" : "getUserByName",
+    "method" : "get",
+    "urlTemplate" : "/user/{username}",
+    "templateParameters" : [ {
+      "description" : "",
+      "name" : "username",
+      "required" : true,
+      "values" : [ ]
+    } ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "deleteUser",
+    "displayName" : "deleteUser",
+    "method" : "delete",
+    "urlTemplate" : "/user/{username}",
+    "templateParameters" : [ {
+      "description" : "",
+      "name" : "username",
+      "required" : true,
+      "values" : [ ]
+    } ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "updateUser",
+    "displayName" : "updateUser",
+    "method" : "put",
+    "urlTemplate" : "/user/{username}",
+    "templateParameters" : [ {
+      "description" : "",
+      "name" : "username",
+      "required" : true,
+      "values" : [ ]
+    } ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "findPetsByStatus",
+    "displayName" : "findPetsByStatus",
+    "method" : "get",
+    "urlTemplate" : "/pet/findByStatus",
+    "templateParameters" : [ ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "createUsersWithListInput",
+    "displayName" : "createUsersWithListInput",
+    "method" : "post",
+    "urlTemplate" : "/user/createWithList",
+    "templateParameters" : [ ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "uploadFile",
+    "displayName" : "uploadFile",
+    "method" : "post",
+    "urlTemplate" : "/pet/{petId}/uploadImage",
+    "templateParameters" : [ {
+      "description" : "",
+      "name" : "petId",
+      "required" : true,
+      "values" : [ ]
+    } ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "getInventory",
+    "displayName" : "getInventory",
+    "method" : "get",
+    "urlTemplate" : "/store/inventory",
+    "templateParameters" : [ ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "loginUser",
+    "displayName" : "loginUser",
+    "method" : "get",
+    "urlTemplate" : "/user/login",
+    "templateParameters" : [ ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "createUser",
+    "displayName" : "createUser",
+    "method" : "post",
+    "urlTemplate" : "/user",
+    "templateParameters" : [ ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "createUsersWithArrayInput",
+    "displayName" : "createUsersWithArrayInput",
+    "method" : "post",
+    "urlTemplate" : "/user/createWithArray",
+    "templateParameters" : [ ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "findPetsByTags",
+    "displayName" : "findPetsByTags",
+    "method" : "get",
+    "urlTemplate" : "/pet/findByTags",
+    "templateParameters" : [ ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "placeOrder",
+    "displayName" : "placeOrder",
+    "method" : "post",
+    "urlTemplate" : "/store/order",
+    "templateParameters" : [ ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "logoutUser",
+    "displayName" : "logoutUser",
+    "method" : "get",
+    "urlTemplate" : "/user/logout",
+    "templateParameters" : [ ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "updatePetWithForm",
+    "displayName" : "updatePetWithForm",
+    "method" : "post",
+    "urlTemplate" : "/pet/{petId}",
+    "templateParameters" : [ {
+      "description" : "",
+      "name" : "petId",
+      "required" : true,
+      "values" : [ ]
+    } ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "getPetById",
+    "displayName" : "getPetById",
+    "method" : "get",
+    "urlTemplate" : "/pet/{petId}",
+    "templateParameters" : [ {
+      "description" : "",
+      "name" : "petId",
+      "required" : true,
+      "values" : [ ]
+    } ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "deletePet",
+    "displayName" : "deletePet",
+    "method" : "delete",
+    "urlTemplate" : "/pet/{petId}",
+    "templateParameters" : [ {
+      "description" : "",
+      "name" : "petId",
+      "required" : true,
+      "values" : [ ]
+    } ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "getOrderById",
+    "displayName" : "getOrderById",
+    "method" : "get",
+    "urlTemplate" : "/store/order/{orderId}",
+    "templateParameters" : [ {
+      "description" : "",
+      "name" : "orderId",
+      "required" : true,
+      "values" : [ ]
+    } ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  }, {
+    "name" : "deleteOrder",
+    "displayName" : "deleteOrder",
+    "method" : "delete",
+    "urlTemplate" : "/store/order/{orderId}",
+    "templateParameters" : [ {
+      "description" : "",
+      "name" : "orderId",
+      "required" : true,
+      "values" : [ ]
+    } ],
+    "description" : "",
+    "policies" : [ {
+      "name" : "base",
+      "description" : "Inherit tag",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+      "useDefault" : false,
+      "policyElements" : [ {
+        "name" : "base",
+        "description" : "Inheritance tag",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ ],
+        "policyElements" : [ ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ ]
+      } ]
+    }, {
+      "name" : "Limit call rate by subscription",
+      "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+      "scope" : [ "PRODUCT", "API", "OPERATION" ],
+      "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+      "section" : [ "INBOUND" ],
+      "supportedSection" : [ "INBOUND" ],
+      "useDefault" : true,
+      "policyElements" : [ {
+        "name" : "rate-limit",
+        "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        }, {
+          "name" : "retry-after-header-name",
+          "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "custom header name, replaces default 'Retry-After'"
+        }, {
+          "name" : "retry-after-variable-name",
+          "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "remaining-calls-header-name",
+          "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        }, {
+          "name" : "remaining-calls-variable-name",
+          "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "policy expression variable name"
+        }, {
+          "name" : "total-calls-header-name",
+          "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "header name"
+        } ],
+        "policyElements" : [ {
+          "name" : "api",
+          "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the operation for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "API id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ {
+            "name" : "operation",
+            "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+            "options" : [ ],
+            "defaultValue" : "",
+            "multiple" : false,
+            "addablePolicies" : false,
+            "policyElementAttributes" : [ {
+              "name" : "name",
+              "description" : "The name of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation name"
+            }, {
+              "name" : "id",
+              "description" : "The ID of the API for which to apply the rate limit.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "operation id"
+            }, {
+              "name" : "calls",
+              "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "number"
+            }, {
+              "name" : "renewal-period",
+              "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+              "value" : "",
+              "valueType" : "STRING",
+              "options" : [ ],
+              "defaultValue" : "seconds"
+            } ],
+            "policyElements" : [ ],
+            "selectedPolicyElements" : [ ],
+            "requiredPolicyElements" : [ ],
+            "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+          } ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+      } ]
+    } ],
+    "tags" : [ ]
+  } ],
+  "policies" : [ {
+    "name" : "base",
+    "description" : "Inherit tag",
+    "scope" : [ "PRODUCT", "API", "OPERATION" ],
+    "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+    "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+    "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+    "useDefault" : false,
+    "policyElements" : [ {
+      "name" : "base",
+      "description" : "Inheritance tag",
+      "multiple" : false,
+      "addablePolicies" : false,
+      "policyElementAttributes" : [ ],
+      "policyElements" : [ ],
+      "selectedPolicyElements" : [ ],
+      "requiredPolicyElements" : [ ],
+      "requiredPolicyElementAttributes" : [ ]
+    } ]
+  }, {
+    "name" : "Limit call rate by subscription",
+    "description" : "Prevents API usage spikes by limiting call rate, on a per subscription basis.",
+    "scope" : [ "PRODUCT", "API", "OPERATION" ],
+    "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+    "section" : [ "INBOUND" ],
+    "supportedSection" : [ "INBOUND" ],
+    "useDefault" : true,
+    "policyElements" : [ {
+      "name" : "rate-limit",
+      "description" : "The rate-limit policy prevents API usage spikes on a per subscription basis by limiting the call rate to a specified number per a specified time period. When the call rate is exceeded, the caller receives a 429 Too Many Requests response status code.",
+      "options" : [ ],
+      "defaultValue" : "",
+      "multiple" : false,
+      "addablePolicies" : false,
+      "policyElementAttributes" : [ {
+        "name" : "calls",
+        "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+        "valueType" : "STRING",
+        "options" : [ ],
+        "defaultValue" : "number"
+      }, {
+        "name" : "renewal-period",
+        "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+        "valueType" : "STRING",
+        "options" : [ ],
+        "defaultValue" : "seconds"
+      }, {
+        "name" : "retry-after-header-name",
+        "description" : "The name of a custom response header whose value is the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+        "valueType" : "STRING",
+        "options" : [ ],
+        "defaultValue" : "custom header name, replaces default 'Retry-After'"
+      }, {
+        "name" : "retry-after-variable-name",
+        "description" : "The name of a variable that stores the recommended retry interval in seconds after the specified call rate is exceeded. Policy expressions aren't allowed.",
+        "valueType" : "STRING",
+        "options" : [ ],
+        "defaultValue" : "policy expression variable name"
+      }, {
+        "name" : "remaining-calls-header-name",
+        "description" : "The name of a response header whose value after each policy execution is the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+        "valueType" : "STRING",
+        "options" : [ ],
+        "defaultValue" : "header name"
+      }, {
+        "name" : "remaining-calls-variable-name",
+        "description" : "The name of a variable that after each policy execution stores the number of remaining calls allowed for the time interval specified in the renewal-period. Policy expressions aren't allowed.",
+        "valueType" : "STRING",
+        "options" : [ ],
+        "defaultValue" : "policy expression variable name"
+      }, {
+        "name" : "total-calls-header-name",
+        "description" : "The name of a response header whose value is the value specified in calls. Policy expressions aren't allowed.",
+        "valueType" : "STRING",
+        "options" : [ ],
+        "defaultValue" : "header name"
+      } ],
+      "policyElements" : [ {
+        "name" : "api",
+        "description" : "Add one or more of these elements to impose a call rate limit on APIs within the product. Product and API call rate limits are applied independently. API can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+        "options" : [ ],
+        "defaultValue" : "",
+        "multiple" : false,
+        "addablePolicies" : false,
+        "policyElementAttributes" : [ {
+          "name" : "name",
+          "description" : "The name of the operation for which to apply the rate limit.",
+          "value" : "",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "API name"
+        }, {
+          "name" : "id",
+          "description" : "The ID of the operation for which to apply the rate limit.",
+          "value" : "",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "API id"
+        }, {
+          "name" : "calls",
+          "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+          "value" : "",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "number"
+        }, {
+          "name" : "renewal-period",
+          "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+          "value" : "",
+          "valueType" : "STRING",
+          "options" : [ ],
+          "defaultValue" : "seconds"
+        } ],
+        "policyElements" : [ {
+          "name" : "operation",
+          "description" : "Add one or more of these elements to impose a call rate limit on operations within an API. Product, API, and operation call rate limits are applied independently. Operation can be referenced either via name or id. If both attributes are provided, id will be used and name will be ignored.",
+          "options" : [ ],
+          "defaultValue" : "",
+          "multiple" : false,
+          "addablePolicies" : false,
+          "policyElementAttributes" : [ {
+            "name" : "name",
+            "description" : "The name of the API for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "operation name"
+          }, {
+            "name" : "id",
+            "description" : "The ID of the API for which to apply the rate limit.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "operation id"
+          }, {
+            "name" : "calls",
+            "description" : "The maximum total number of calls allowed during the time interval specified in renewal-period. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "number"
+          }, {
+            "name" : "renewal-period",
+            "description" : "The length in seconds of the sliding window during which the number of allowed requests should not exceed the value specified in calls. Maximum allowed value: 300 seconds. Policy expressions aren't allowed.",
+            "value" : "",
+            "valueType" : "STRING",
+            "options" : [ ],
+            "defaultValue" : "seconds"
+          } ],
+          "policyElements" : [ ],
+          "selectedPolicyElements" : [ ],
+          "requiredPolicyElements" : [ ],
+          "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+        } ],
+        "selectedPolicyElements" : [ ],
+        "requiredPolicyElements" : [ ],
+        "requiredPolicyElementAttributes" : [ [ "id", "name" ], "calls", "renewal-period" ]
+      } ],
+      "selectedPolicyElements" : [ ],
+      "requiredPolicyElements" : [ ],
+      "requiredPolicyElementAttributes" : [ "calls", "renewal-period" ]
+    } ]
+  } ],
+  "connector" : {
+    "id" : "64f71c6807776e7c0d732868",
+    "cts" : 1693916261166,
+    "createdUserName" : "Akash K",
+    "mts" : 1694171425421,
+    "connectorName" : "azure-poc",
+    "managementHost" : "azure-demo-apiwiz.management.azure-api.net",
+    "gatewayHost" : "azure-demo-apiwiz.azure-api.net",
+    "subscriptionId" : "3ff1a535-1e89-487e-83f1-778695628b4f",
+    "resourceGroup" : "apiwiz-azure",
+    "serviceName" : "azure-demo-apiwiz"
+  },
+  "enableScmUpload" : true,
+  "scmUpload" : {
+    "repoName" : "devtestscm",
+    "branch" : "main",
+    "hostUrl" : "https://github.com/Gautami0517/devtestscm",
+    "folderName" : "azure",
+    "commitMessage" : "commit",
+    "scmSource" : "git",
+    "username" : "Gautami0517",
+    "password" : "",
+    "authType" : "token"
+  }
+}
