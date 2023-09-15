@@ -1,0 +1,298 @@
+{
+  "id" : "6503ec6f617abf7679a13aaa",
+  "cts" : 1694755951127,
+  "mts" : 1694755951127,
+  "createdBy" : "Gautami Kumari",
+  "modifiedBy" : "Gautami Kumari",
+  "kongAdminHost" : "http://34.121.145.236:9001/",
+  "runtime" : "9000-port",
+  "workspace" : "default",
+  "swaggerId" : "64df07954d81d075f1678975",
+  "serviceName" : "ach-operations-updated1",
+  "revision" : 16,
+  "swaggerVersion" : "",
+  "swaggerName" : "ACH Operations",
+  "serviceId" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245",
+  "service" : {
+    "serviceName" : "ach-operations-updated1",
+    "protocol" : "https",
+    "host" : "virtserver.swaggerhub.com",
+    "hosts" : [ "virtserver.swaggerhub.com" ],
+    "basePath" : "/BIAN-3/BIAN/ACHOperations/11.0.0",
+    "basePaths" : [ "/BIAN-3/BIAN/ACHOperations/11.0.0" ],
+    "port" : 0,
+    "ports" : [ -1 ],
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    }
+  },
+  "routes" : [ {
+    "routeName" : "UpdateOutboundACH",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/OutboundACH/(?<outboundachid>\\w+/Update" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "InitiateInboundACH",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/InboundACH/(?<inboundachid>\\w+/Initiate" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "InitiateClearingandSettlement",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/ClearingandSettlement/(?<clearingandsettlementid>\\w+/Initiate" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "Update",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/Update" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "InitiateOutboundACH",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/OutboundACH/(?<outboundachid>\\w+/Initiate" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "RetrieveInboundACH",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/InboundACH/(?<inboundachid>\\w+/Retrieve" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "RetrieveOutboundACH",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/OutboundACH/(?<outboundachid>\\w+/Retrieve" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "RetrieveClearingandSettlement",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/ClearingandSettlement/(?<clearingandsettlementid>\\w+/Retrieve" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "Retrieve",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/Retrieve" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "UpdateReconciliation",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/Reconciliation/(?<reconciliationid>\\w+/Update" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "RetrieveReconciliation",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/Reconciliation/(?<reconciliationid>\\w+/Retrieve" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "UpdateClearingandSettlement",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/ClearingandSettlement/(?<clearingandsettlementid>\\w+/Update" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "InitiateWarehousing",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/Warehousing/(?<warehousingid>\\w+/Initiate" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "InitiateReconciliation",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/Reconciliation/(?<reconciliationid>\\w+/Initiate" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "RetrieveWarehousing",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/Warehousing/(?<warehousingid>\\w+/Retrieve" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "UpdateInboundACH",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/InboundACH/(?<inboundachid>\\w+/Update" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "UpdateWarehousing",
+    "service" : {
+      "id" : "6d19f5d4-d6a8-433f-84b2-9555d3bfe245"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "~/BIAN-3/BIAN/ACHOperations/11.0.0/ACHOperations/(?<achoperationsid>\\w+/Warehousing/(?<warehousingid>\\w+/Update" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  } ],
+  "plugins" : [ {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "ach-operations-updated1",
+    "configs" : {
+      "allow" : [ "devportal-5/sep/2023" ],
+      "hide_groups_header" : true
+    }
+  } ]
+}
