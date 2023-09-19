@@ -1,0 +1,124 @@
+{
+  "id" : "65093affbf86e058e0c0e933",
+  "cts" : 1695103743023,
+  "mts" : 1695103743023,
+  "createdBy" : "Gautami Kumari",
+  "modifiedBy" : "Gautami Kumari",
+  "kongAdminHost" : "http://34.121.145.236:9001/",
+  "runtime" : "kong-valid-runtime",
+  "workspace" : "default",
+  "swaggerId" : "64e6e8a9ea4a600de8f35013",
+  "serviceName" : "asset-events",
+  "revision" : 2,
+  "swaggerVersion" : "",
+  "swaggerName" : "asset-events",
+  "serviceId" : "0d24f69f-76a8-4f7c-9ee6-5cd21d8061d8",
+  "service" : {
+    "serviceName" : "asset-events",
+    "protocol" : "https",
+    "host" : "mock.apiwiz.io",
+    "hosts" : [ ],
+    "basePath" : "/v1",
+    "basePaths" : [ ],
+    "port" : 80,
+    "ports" : [ ],
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    }
+  },
+  "routes" : [ {
+    "routeName" : "createAssetEvent",
+    "service" : {
+      "id" : "0d24f69f-76a8-4f7c-9ee6-5cd21d8061d8"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/v1/events" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "getEventById",
+    "service" : {
+      "id" : "0d24f69f-76a8-4f7c-9ee6-5cd21d8061d8"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/v1/events" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "deleteEvent",
+    "service" : {
+      "id" : "0d24f69f-76a8-4f7c-9ee6-5cd21d8061d8"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "DELETE" ],
+    "paths" : [ "/v1/events" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "updateEvent",
+    "service" : {
+      "id" : "0d24f69f-76a8-4f7c-9ee6-5cd21d8061d8"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "/v1/events" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  } ],
+  "plugins" : [ {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "asset-events",
+    "configs" : { }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createAssetEvent",
+    "configs" : { }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getEventById",
+    "configs" : { }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteEvent",
+    "configs" : { }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateEvent",
+    "configs" : { }
+  } ]
+}
