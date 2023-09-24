@@ -1,0 +1,53 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "Asset-Events",
+    "description" : "Swagger Documentation for asset-events-kong",
+    "version" : "v1.0.0"
+  },
+  "paths" : {
+    "/event-data" : {
+      "summary" : "Event Data",
+      "x-description" : "Event Data",
+      "servers" : [ {
+        "x-name" : "Sandbox Server",
+        "x-schema" : "https://",
+        "x-hostName" : "mock.apiwiz.io:443",
+        "url" : "https://mock.apiwiz.io:443/v1/asset-events",
+        "x-basePath" : "/v1/asset-events"
+      } ],
+      "get" : {
+        "operationId" : "getAssetEventData",
+        "summary" : "Get Asset Event Data",
+        "description" : "Get Asset Event Data",
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          }
+        }
+      }
+    }
+  },
+  "servers" : [ {
+    "x-name" : "Sandbox Server",
+    "x-schema" : "https://",
+    "x-hostName" : "mock.apiwiz.io:443",
+    "url" : "https://mock.apiwiz.io:443/v1/asset-events",
+    "x-basePath" : "/v1/asset-events"
+  } ],
+  "tags" : [ ],
+  "security" : [ ],
+  "components" : { },
+  "x-mock" : true,
+  "x-metadata" : {
+    "metadata" : {
+      "swaggerName" : "5349634f037b48feb10935a80e36c3cb",
+      "revision" : 1,
+      "documentation" : [ ],
+      "category" : [ {
+        "name" : "Unsorted",
+        "paths" : [ "/event-data" ]
+      } ]
+    }
+  }
+}
