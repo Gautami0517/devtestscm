@@ -1,0 +1,587 @@
+{
+  "id" : "6512bb600301d6200d64d449",
+  "cts" : 1695726432156,
+  "mts" : 1695726432156,
+  "createdBy" : "Chinmayee Jagadeesh",
+  "modifiedBy" : "Chinmayee Jagadeesh",
+  "kongAdminHost" : "http://34.121.145.236:9001/",
+  "runtime" : "9000-port",
+  "workspace" : "default",
+  "swaggerId" : "642aad06639fed06fed183d1",
+  "serviceName" : "acme-bank-transactions",
+  "revision" : 2,
+  "swaggerVersion" : "",
+  "swaggerName" : "Acme Bank Transactions",
+  "serviceId" : "0bc620c5-84f0-485d-acf1-1ae383404631",
+  "service" : {
+    "serviceName" : "acme-bank-transactions",
+    "protocol" : "https",
+    "host" : "mock.apiwiz.io",
+    "hosts" : [ ],
+    "basePath" : "/v1/acmebank/transactions",
+    "basePaths" : [ ],
+    "port" : 80,
+    "ports" : [ ],
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    }
+  },
+  "routes" : [ {
+    "routeName" : "findSavingsTransactionById",
+    "service" : {
+      "id" : "0bc620c5-84f0-485d-acf1-1ae383404631"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/v1/acmebank/transactions/savings-transaction/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "deleteSavingsTransactionById",
+    "service" : {
+      "id" : "0bc620c5-84f0-485d-acf1-1ae383404631"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "DELETE" ],
+    "paths" : [ "~/v1/acmebank/transactions/savings-transaction/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "findPrimaryTransactionById",
+    "service" : {
+      "id" : "0bc620c5-84f0-485d-acf1-1ae383404631"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/v1/acmebank/transactions/primary-transaction/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "deletePrimaryTransactionById",
+    "service" : {
+      "id" : "0bc620c5-84f0-485d-acf1-1ae383404631"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "DELETE" ],
+    "paths" : [ "~/v1/acmebank/transactions/primary-transaction/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "addSavingsTransaction",
+    "service" : {
+      "id" : "0bc620c5-84f0-485d-acf1-1ae383404631"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/v1/acmebank/transactions/savings-transaction" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "findAllSavingsTransactions",
+    "service" : {
+      "id" : "0bc620c5-84f0-485d-acf1-1ae383404631"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/v1/acmebank/transactions/savings-transaction" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "updateSavingsTransaction",
+    "service" : {
+      "id" : "0bc620c5-84f0-485d-acf1-1ae383404631"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "/v1/acmebank/transactions/savings-transaction" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "addPrimaryTransaction",
+    "service" : {
+      "id" : "0bc620c5-84f0-485d-acf1-1ae383404631"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/v1/acmebank/transactions/primary-transaction" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "findAllPrimaryTransactions",
+    "service" : {
+      "id" : "0bc620c5-84f0-485d-acf1-1ae383404631"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/v1/acmebank/transactions/primary-transaction" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "updatePrimaryTransaction",
+    "service" : {
+      "id" : "0bc620c5-84f0-485d-acf1-1ae383404631"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "/v1/acmebank/transactions/primary-transaction" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  } ],
+  "plugins" : [ {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "allow" : [ "allow" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "acme-bank-transactions",
+    "configs" : {
+      "allow" : [ "allow" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "findSavingsTransactionById",
+    "configs" : {
+      "allow" : [ "allow" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteSavingsTransactionById",
+    "configs" : {
+      "allow" : [ "allow" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "findPrimaryTransactionById",
+    "configs" : {
+      "allow" : [ "allow" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deletePrimaryTransactionById",
+    "configs" : {
+      "allow" : [ "allow" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "addSavingsTransaction",
+    "configs" : {
+      "allow" : [ "allow" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "findAllSavingsTransactions",
+    "configs" : {
+      "allow" : [ "allow" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateSavingsTransaction",
+    "configs" : {
+      "allow" : [ "allow" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "addPrimaryTransaction",
+    "configs" : {
+      "allow" : [ "allow" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "findAllPrimaryTransactions",
+    "configs" : {
+      "allow" : [ "allow" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updatePrimaryTransaction",
+    "configs" : {
+      "allow" : [ "allow" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "allow" : [ "rate1", " rate2" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "acme-bank-transactions",
+    "configs" : {
+      "allow" : [ "rate1", " rate2" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "findSavingsTransactionById",
+    "configs" : {
+      "allow" : [ "rate1", " rate2" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteSavingsTransactionById",
+    "configs" : {
+      "allow" : [ "rate1", " rate2" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "findPrimaryTransactionById",
+    "configs" : {
+      "allow" : [ "rate1", " rate2" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deletePrimaryTransactionById",
+    "configs" : {
+      "allow" : [ "rate1", " rate2" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "addSavingsTransaction",
+    "configs" : {
+      "allow" : [ "rate1", " rate2" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "findAllSavingsTransactions",
+    "configs" : {
+      "allow" : [ "rate1", " rate2" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateSavingsTransaction",
+    "configs" : {
+      "allow" : [ "rate1", " rate2" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "addPrimaryTransaction",
+    "configs" : {
+      "allow" : [ "rate1", " rate2" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "findAllPrimaryTransactions",
+    "configs" : {
+      "allow" : [ "rate1", " rate2" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updatePrimaryTransaction",
+    "configs" : {
+      "allow" : [ "rate1", " rate2" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "acme-bank-transactions",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "findSavingsTransactionById",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteSavingsTransactionById",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "findPrimaryTransactionById",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deletePrimaryTransactionById",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "addSavingsTransaction",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "findAllSavingsTransactions",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateSavingsTransaction",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "addPrimaryTransaction",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "findAllPrimaryTransactions",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updatePrimaryTransaction",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "cons10",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "vidya",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "consumer1",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "kong-consumer",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "testing123",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "tesrtewfewrfew",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "test",
+    "configs" : {
+      "second" : "2",
+      "minute" : "5",
+      "policy" : "cluster"
+    }
+  } ]
+}
