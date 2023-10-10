@@ -1,0 +1,79 @@
+{
+  "id" : "6525344e908f55137156c60e",
+  "cts" : 1696937038695,
+  "mts" : 1696937038695,
+  "createdBy" : "vidya.wiz vidya.wiz",
+  "modifiedBy" : "vidya.wiz vidya.wiz",
+  "kongAdminHost" : "http://34.121.145.236:9001/",
+  "runtime" : "9000-port",
+  "workspace" : "default",
+  "swaggerId" : "64913e66a3f0d91f697bfa68",
+  "serviceName" : "acme-bank-accounts",
+  "revision" : 17,
+  "swaggerVersion" : "",
+  "swaggerName" : "Acme Bank Accounts",
+  "serviceId" : "a6e14204-0846-4618-a0ab-1ae6c93de7e0",
+  "service" : {
+    "serviceName" : "acme-bank-accounts",
+    "protocol" : "https",
+    "host" : "mock.apiwiz.io",
+    "hosts" : [ ],
+    "basePath" : "/v1/acmebank/accounts",
+    "basePaths" : [ ],
+    "port" : 80,
+    "ports" : [ ],
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    }
+  },
+  "routes" : [ {
+    "routeName" : "findAllBankAccounts",
+    "service" : {
+      "id" : "a6e14204-0846-4618-a0ab-1ae6c93de7e0"
+    },
+    "protocols" : [ "https", "http" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/v1/acmebank/accounts/bank-account" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  } ],
+  "plugins" : [ {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "allow" : [ "meta" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "acme-bank-accounts",
+    "configs" : {
+      "allow" : [ "meta" ],
+      "hide_groups_header" : true
+    }
+  }, {
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "findAllBankAccounts",
+    "configs" : {
+      "allow" : [ "meta" ],
+      "hide_groups_header" : true
+    }
+  } ]
+}
