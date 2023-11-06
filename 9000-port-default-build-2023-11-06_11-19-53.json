@@ -1,0 +1,554 @@
+{
+  "id" : "6548cbd9373a796a1c77de30",
+  "cts" : 1699269593439,
+  "mts" : 1699269593439,
+  "createdBy" : "vidya.wiz vidya.wiz",
+  "modifiedBy" : "vidya.wiz vidya.wiz",
+  "kongAdminHost" : "http://34.121.145.236:9001/",
+  "runtime" : "9000-port",
+  "workspace" : "default",
+  "swaggerId" : "645dcaccc8fa167d1071cec4",
+  "serviceName" : "endpoints-api",
+  "revision" : 18,
+  "swaggerVersion" : "",
+  "swaggerName" : "Endpoints API",
+  "serviceId" : "57a5b22b-9c30-4d3e-ace3-57bd5006df08",
+  "service" : {
+    "serviceName" : "endpoints-api",
+    "protocol" : "https",
+    "host" : "mock.apiwiz.io",
+    "hosts" : [ "mock.apiwiz.io" ],
+    "basePath" : "/V1/endpoints",
+    "basePaths" : [ "/V1/endpoints" ],
+    "port" : 0,
+    "ports" : [ -1 ],
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    }
+  },
+  "routes" : [ {
+    "routeName" : "selected-serviceendpoints",
+    "service" : {
+      "id" : "57a5b22b-9c30-4d3e-ace3-57bd5006df08"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/V1/endpoints/(?<id>\\w+/service" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "access-endpoints",
+    "service" : {
+      "id" : "57a5b22b-9c30-4d3e-ace3-57bd5006df08"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/V1/endpoints/current" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "Get-info",
+    "service" : {
+      "id" : "57a5b22b-9c30-4d3e-ace3-57bd5006df08"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/V1/endpoints/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "delete-endpoint",
+    "service" : {
+      "id" : "57a5b22b-9c30-4d3e-ace3-57bd5006df08"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "DELETE" ],
+    "paths" : [ "~/V1/endpoints/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "change-info",
+    "service" : {
+      "id" : "57a5b22b-9c30-4d3e-ace3-57bd5006df08"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "~/V1/endpoints/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "disable-enpoint",
+    "service" : {
+      "id" : "57a5b22b-9c30-4d3e-ace3-57bd5006df08"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/V1/endpoints/(?<id>\\w+/disable" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "enable-endpoint",
+    "service" : {
+      "id" : "57a5b22b-9c30-4d3e-ace3-57bd5006df08"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/V1/endpoints/(?<id>\\w+/active" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "add-endpoint",
+    "service" : {
+      "id" : "57a5b22b-9c30-4d3e-ace3-57bd5006df08"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/V1/endpoints/" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  }, {
+    "routeName" : "list-endpoints",
+    "service" : {
+      "id" : "57a5b22b-9c30-4d3e-ace3-57bd5006df08"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/V1/endpoints/" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    }
+  } ],
+  "plugins" : [ {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "endpoints-api",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "selected-serviceendpoints",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "access-endpoints",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "Get-info",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "delete-endpoint",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "change-info",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "disable-enpoint",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "enable-endpoint",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "add-endpoint",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "list-endpoints",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "endpoints-api",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "selected-serviceendpoints",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "access-endpoints",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "Get-info",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "delete-endpoint",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "change-info",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "disable-enpoint",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "enable-endpoint",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "add-endpoint",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "list-endpoints",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "endpoints-api",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "selected-serviceendpoints",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "access-endpoints",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "Get-info",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "delete-endpoint",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "change-info",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "disable-enpoint",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "enable-endpoint",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "add-endpoint",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "list-endpoints",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "vidya-consumer",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "onprem",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "cons10",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "vidya",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "consumer1",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "kong-consumer",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "testing123",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "tesrtewfewrfew",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  } ]
+}
