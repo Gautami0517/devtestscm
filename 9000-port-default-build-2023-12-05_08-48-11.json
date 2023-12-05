@@ -1,0 +1,1859 @@
+{
+  "id" : "656ee3ca373a796a1c77de72",
+  "cts" : 1701766090786,
+  "mts" : 1701766090786,
+  "createdBy" : "vidya.wiz vidya.wiz",
+  "modifiedBy" : "vidya.wiz vidya.wiz",
+  "kongAdminHost" : "http://34.121.145.236:9001/",
+  "runtime" : "9000-port",
+  "workspace" : "default",
+  "swaggerId" : "64083657ea1f121b9d455549",
+  "serviceName" : "loans-api-v1",
+  "revision" : 2,
+  "swaggerVersion" : "",
+  "swaggerName" : "Loans-API-V1",
+  "serviceId" : "57155f33-6d1e-4428-ab3a-af820fecb869",
+  "service" : {
+    "serviceName" : "loans-api-v1",
+    "protocol" : "https",
+    "host" : "api.tonikbank.com",
+    "hosts" : [ "api.tonikbank.com", "sandboxapi.tonikbank.com" ],
+    "basePath" : "/v1/loans",
+    "basePaths" : [ "/v1/loans" ],
+    "port" : 0,
+    "ports" : [ -1 ],
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    }
+  },
+  "routes" : [ {
+    "routeName" : "POSTCreateReferals",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/referal-details" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdateCurrentAddress",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/current-address" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "GETApplicationLov",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/lov/(?<applicationlov>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdateMaritalStatus",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/marital-status" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdateMerchant",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/merchant" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdatePurpose",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/purpose" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "GetLoan",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/(?<loanDigitalId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdateCaptial",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/capital" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdateBasicDetails",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/basicdetails" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdateTin",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/tin" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "GETLoanTransaction",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/loantransactions" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTLoanSettlement",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/loanSettlement" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "PATCHDocValidation",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PATCH" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/docvalidation" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "GETLoanDashboard",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/v1/loans/loan-dashboard" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdateTnC",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/tnc" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "PATCHCredolabscore",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PATCH" ],
+    "paths" : [ "~/v1/loans/credolab/datainsight/(?<refId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "GETLoanOffers",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/offers/(?<loanDigitalId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "PATCHSkyUpgrade",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PATCH" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/skycupgrade" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdateReceiptDetails",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/receipt" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTGenerateCreditScoreId",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/v1/loans/credolab/score/reference-id" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "PATCHUpdateAppRating",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PATCH" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/app-rating" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdatePurpleKey",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/purplekey" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdateloanSignedDocList",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/signed-documents" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "GETLoanFullRepaymentInq",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/loanFullRepaymentInq" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "GETLoanSignedDocList",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/loandocuments/(?<loanDigitalId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTInsertLoanData",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdateDependents",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/dependents" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "PATCHRelinkCard",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PATCH" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/cards" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdateCardDetails",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/cards" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdateBanks",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/banks" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdateDocuments",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/documents" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "GETLoanProductsListNew",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/tenures" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTUpdateIndustries",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/industries" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "PATCHUpdateTenureSalaryDays",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PATCH" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/tenur" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "POSTTenureApprovedLoanAmt",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/v1/loans/(?<loan-product>\\w+/tenur" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "GETCredolabscore",
+    "service" : {
+      "id" : "57155f33-6d1e-4428-ab3a-af820fecb869"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/v1/loans/credolab/score/(?<refId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  } ],
+  "plugins" : [ {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "loans-api-v1",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTCreateReferals",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateCurrentAddress",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETApplicationLov",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateMaritalStatus",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateMerchant",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdatePurpose",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GetLoan",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateCaptial",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateBasicDetails",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateTin",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanTransaction",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTLoanSettlement",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHDocValidation",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanDashboard",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateTnC",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHCredolabscore",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanOffers",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHSkyUpgrade",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateReceiptDetails",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTGenerateCreditScoreId",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHUpdateAppRating",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdatePurpleKey",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateloanSignedDocList",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanFullRepaymentInq",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanSignedDocList",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTInsertLoanData",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateDependents",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHRelinkCard",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateCardDetails",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateBanks",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateDocuments",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanProductsListNew",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateIndustries",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHUpdateTenureSalaryDays",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTTenureApprovedLoanAmt",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETCredolabscore",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "loans-api-v1",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTCreateReferals",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateCurrentAddress",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETApplicationLov",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateMaritalStatus",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateMerchant",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdatePurpose",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GetLoan",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateCaptial",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateBasicDetails",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateTin",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanTransaction",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTLoanSettlement",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHDocValidation",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanDashboard",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateTnC",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHCredolabscore",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanOffers",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHSkyUpgrade",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateReceiptDetails",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTGenerateCreditScoreId",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHUpdateAppRating",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdatePurpleKey",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateloanSignedDocList",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanFullRepaymentInq",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanSignedDocList",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTInsertLoanData",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateDependents",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHRelinkCard",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateCardDetails",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateBanks",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateDocuments",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanProductsListNew",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateIndustries",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHUpdateTenureSalaryDays",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTTenureApprovedLoanAmt",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETCredolabscore",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "loans-api-v1",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTCreateReferals",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateCurrentAddress",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETApplicationLov",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateMaritalStatus",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateMerchant",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdatePurpose",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GetLoan",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateCaptial",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateBasicDetails",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateTin",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanTransaction",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTLoanSettlement",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHDocValidation",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanDashboard",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateTnC",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHCredolabscore",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanOffers",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHSkyUpgrade",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateReceiptDetails",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTGenerateCreditScoreId",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHUpdateAppRating",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdatePurpleKey",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateloanSignedDocList",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanFullRepaymentInq",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanSignedDocList",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTInsertLoanData",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateDependents",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHRelinkCard",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateCardDetails",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateBanks",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateDocuments",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETLoanProductsListNew",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTUpdateIndustries",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "PATCHUpdateTenureSalaryDays",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "POSTTenureApprovedLoanAmt",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "GETCredolabscore",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "vidya-consumer",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "onprem",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "cons10",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "vidya",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "consumer1",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "kong-consumer",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "testing123",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "tesrtewfewrfew",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  } ]
+}
