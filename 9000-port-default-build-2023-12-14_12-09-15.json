@@ -1,0 +1,543 @@
+{
+  "id" : "657af06b373a796a1c77e045",
+  "cts" : 1702555755538,
+  "mts" : 1702555755538,
+  "createdBy" : "vidya.wiz vidya.wiz",
+  "modifiedBy" : "vidya.wiz vidya.wiz",
+  "kongAdminHost" : "http://34.121.145.236:9001/",
+  "runtime" : "9000-port",
+  "workspace" : "default",
+  "swaggerId" : "637eb6744743c118c379f38b",
+  "serviceName" : "fxrates",
+  "revision" : 1,
+  "swaggerVersion" : "",
+  "swaggerName" : "FxRates",
+  "serviceId" : "6b6e6c23-22a8-4656-bd07-df4f20c481d0",
+  "service" : {
+    "serviceName" : "fxrates",
+    "protocol" : "https",
+    "host" : "mock.apiwiz.io",
+    "hosts" : [ ],
+    "basePath" : "/itorix/v1/fxrates",
+    "basePaths" : [ ],
+    "port" : 80,
+    "ports" : [ ],
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    }
+  },
+  "routes" : [ {
+    "routeName" : "get-searchproducts",
+    "service" : {
+      "id" : "6b6e6c23-22a8-4656-bd07-df4f20c481d0"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/itorix/v1/fxrates/search" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "post-addproduct",
+    "service" : {
+      "id" : "6b6e6c23-22a8-4656-bd07-df4f20c481d0"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/itorix/v1/fxrates/add" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "get-singleproduct",
+    "service" : {
+      "id" : "6b6e6c23-22a8-4656-bd07-df4f20c481d0"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/itorix/v1/fxrates/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "delete-product",
+    "service" : {
+      "id" : "6b6e6c23-22a8-4656-bd07-df4f20c481d0"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "DELETE" ],
+    "paths" : [ "~/itorix/v1/fxrates/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "put-updateproduct",
+    "service" : {
+      "id" : "6b6e6c23-22a8-4656-bd07-df4f20c481d0"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "~/itorix/v1/fxrates/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "get-allproducts",
+    "service" : {
+      "id" : "6b6e6c23-22a8-4656-bd07-df4f20c481d0"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/itorix/v1/fxrates/" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "get-productcategories",
+    "service" : {
+      "id" : "6b6e6c23-22a8-4656-bd07-df4f20c481d0"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/itorix/v1/fxrates/categories" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "get-productsofcategory",
+    "service" : {
+      "id" : "6b6e6c23-22a8-4656-bd07-df4f20c481d0"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/itorix/v1/fxrates/category/(?<categoryName>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  } ],
+  "plugins" : [ {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "fxrates",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "get-searchproducts",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "post-addproduct",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "get-singleproduct",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "delete-product",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "put-updateproduct",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "get-allproducts",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "get-productcategories",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "get-productsofcategory",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "fxrates",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "get-searchproducts",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "post-addproduct",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "get-singleproduct",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "delete-product",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "put-updateproduct",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "get-allproducts",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "get-productcategories",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "get-productsofcategory",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "fxrates",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "get-searchproducts",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "post-addproduct",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "get-singleproduct",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "delete-product",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "put-updateproduct",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "get-allproducts",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "get-productcategories",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "get-productsofcategory",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "vidya-consumer",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "onprem",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "cons10",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "vidya",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "consumer1",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "kong-consumer",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "testing123",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "tesrtewfewrfew",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  } ]
+}
