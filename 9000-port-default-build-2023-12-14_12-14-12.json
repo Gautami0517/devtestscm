@@ -1,0 +1,1765 @@
+{
+  "id" : "657af194373a796a1c77e11d",
+  "cts" : 1702556052886,
+  "mts" : 1702556052886,
+  "createdBy" : "vidya.wiz vidya.wiz",
+  "modifiedBy" : "vidya.wiz vidya.wiz",
+  "kongAdminHost" : "http://34.121.145.236:9001/",
+  "runtime" : "9000-port",
+  "workspace" : "default",
+  "swaggerId" : "64c0fd8e4b14dc33a6fd8a00",
+  "serviceName" : "api-monitoring",
+  "revision" : 3,
+  "swaggerVersion" : "",
+  "swaggerName" : "API Monitoring",
+  "serviceId" : "88ed6ecd-a148-4c29-b040-5cbce882e976",
+  "service" : {
+    "serviceName" : "api-monitoring",
+    "protocol" : "https",
+    "host" : "gcp-api.apiwiz.io",
+    "hosts" : [ "gcp-api.apiwiz.io" ],
+    "basePath" : "/itorix/v1/monitor",
+    "basePaths" : [ "/itorix/v1/monitor", "/" ],
+    "port" : 0,
+    "ports" : [ -1 ],
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    }
+  },
+  "routes" : [ {
+    "routeName" : "getCollectionsVariable",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/itorix/v1/monitor/collections/(?<id>\\w+/variables" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getCollection",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/itorix/v1/monitor/collections/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getVariables",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/itorix/v1/monitor/variables/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "downloadCertificate",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/itorix/v1/monitor/certificates/(?<name>\\w+/download" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "deleteCollection",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "DELETE" ],
+    "paths" : [ "~/itorix/v1/monitor/collections/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "updateCollection",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "~/itorix/v1/monitor/collections/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "searchForEnvironment",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/itorix/v1/monitor/variables/search" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getSchedulers",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/itorix/v1/monitor/collections/(?<id>\\w+/schedulers" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getMetaData",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/itorix/v1/monitor/metadata" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "createMetaData",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "/itorix/v1/monitor/metadata" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "searchForCertificates",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/itorix/v1/monitor/certificates/search" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getCertificatesOverView",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/itorix/v1/monitor/certificates/overview" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getRequest",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/itorix/v1/monitor/collections/(?<id>\\w+/requests/(?<requestId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "deleteRequest",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "DELETE" ],
+    "paths" : [ "~/itorix/v1/monitor/collections/(?<id>\\w+/requests/(?<requestId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "updateRequest",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "~/itorix/v1/monitor/collections/(?<id>\\w+/requests/(?<requestId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "search",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/itorix/v1/monitor/search" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "createRequest",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "~/itorix/v1/monitor/collections/(?<id>\\w+/requests" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getRequests",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/itorix/v1/monitor/collections/(?<id>\\w+/requests" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getRequestSequence",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/itorix/v1/monitor/collections/(?<id>\\w+/sequence" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "updateRequestSequence",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "~/itorix/v1/monitor/collections/(?<id>\\w+/sequence" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getSlackChannelsWithMonitoringScope",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/itorix/v1/monitor/collections/slackChannels" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getCertificate",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/itorix/v1/monitor/certificates/(?<name>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "deleteCertificate",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "DELETE" ],
+    "paths" : [ "~/itorix/v1/monitor/certificates/(?<name>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "deleteVariables",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "DELETE" ],
+    "paths" : [ "~/itorix/v1/monitor/variables/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "updateVariables",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "~/itorix/v1/monitor/variables/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "createVariables",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/itorix/v1/monitor/variables" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getAllVariables",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/itorix/v1/monitor/variables" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getRequestStatLogs",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/itorix/v1/monitor/collections/(?<id>\\w+/requests/(?<requestId>\\w+/events/(?<eventId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getRequestStats",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/itorix/v1/monitor/collections/(?<id>\\w+/requests/(?<requestId>\\w+/schedulers/(?<schedulerId>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "createCollection",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/itorix/v1/monitor/collections" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getCollections",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/itorix/v1/monitor/collections" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getVariablesOverview",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/itorix/v1/monitor/variables/overview" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "createOrUpdateCertificate",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/itorix/v1/monitor/certificates" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getCertificates",
+    "service" : {
+      "id" : "88ed6ecd-a148-4c29-b040-5cbce882e976"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/itorix/v1/monitor/certificates" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  } ],
+  "plugins" : [ {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "api-monitoring",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCollectionsVariable",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCollection",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getVariables",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "downloadCertificate",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteCollection",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateCollection",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "searchForEnvironment",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getSchedulers",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getMetaData",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createMetaData",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "searchForCertificates",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCertificatesOverView",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getRequest",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteRequest",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateRequest",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "search",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createRequest",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getRequests",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getRequestSequence",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateRequestSequence",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getSlackChannelsWithMonitoringScope",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCertificate",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteCertificate",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteVariables",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateVariables",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createVariables",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getAllVariables",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getRequestStatLogs",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getRequestStats",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createCollection",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCollections",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getVariablesOverview",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createOrUpdateCertificate",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCertificates",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "api-monitoring",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCollectionsVariable",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCollection",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getVariables",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "downloadCertificate",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteCollection",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateCollection",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "searchForEnvironment",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getSchedulers",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getMetaData",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createMetaData",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "searchForCertificates",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCertificatesOverView",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getRequest",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteRequest",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateRequest",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "search",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createRequest",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getRequests",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getRequestSequence",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateRequestSequence",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getSlackChannelsWithMonitoringScope",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCertificate",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteCertificate",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteVariables",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateVariables",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createVariables",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getAllVariables",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getRequestStatLogs",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getRequestStats",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createCollection",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCollections",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getVariablesOverview",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createOrUpdateCertificate",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCertificates",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "api-monitoring",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCollectionsVariable",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCollection",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getVariables",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "downloadCertificate",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteCollection",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateCollection",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "searchForEnvironment",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getSchedulers",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getMetaData",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createMetaData",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "searchForCertificates",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCertificatesOverView",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getRequest",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteRequest",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateRequest",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "search",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createRequest",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getRequests",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getRequestSequence",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateRequestSequence",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getSlackChannelsWithMonitoringScope",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCertificate",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteCertificate",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "deleteVariables",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "updateVariables",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createVariables",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getAllVariables",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getRequestStatLogs",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getRequestStats",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createCollection",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCollections",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getVariablesOverview",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "createOrUpdateCertificate",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getCertificates",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "vidya-consumer",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "onprem",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "cons10",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "vidya",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "consumer1",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "kong-consumer",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "testing123",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "tesrtewfewrfew",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  } ]
+}
