@@ -1,0 +1,261 @@
+{
+  "id" : "657aefb7373a796a1c77dfd6",
+  "cts" : 1702555575629,
+  "mts" : 1702555575629,
+  "createdBy" : "vidya.wiz vidya.wiz",
+  "modifiedBy" : "vidya.wiz vidya.wiz",
+  "kongAdminHost" : "http://34.121.145.236:9001/",
+  "runtime" : "9000-port",
+  "workspace" : "default",
+  "swaggerId" : "65154db2854c5b3804b9d630",
+  "serviceName" : "petstore-aws",
+  "revision" : 1,
+  "swaggerVersion" : "",
+  "swaggerName" : "Petstore Aws",
+  "serviceId" : "e8c4aeab-35f7-4b4e-93cb-9704cc2d6355",
+  "service" : {
+    "serviceName" : "petstore-aws",
+    "protocol" : "https",
+    "host" : "petstore3.swagger.io",
+    "hosts" : [ ],
+    "basePath" : "/api/v3",
+    "basePaths" : [ ],
+    "port" : 80,
+    "ports" : [ ],
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    }
+  },
+  "routes" : [ {
+    "routeName" : "/store/order",
+    "service" : {
+      "id" : "e8c4aeab-35f7-4b4e-93cb-9704cc2d6355"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/api/v3/store/order" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  }, {
+    "routeName" : "getPets",
+    "service" : {
+      "id" : "e8c4aeab-35f7-4b4e-93cb-9704cc2d6355"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "~/api/v3/pet/(?<id>\\w+" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "preserve_host" : false,
+      "protocol" : "https",
+      "headers" : [ ],
+      "regex_priority" : 1,
+      "strip_path" : false,
+      "request_buffering" : false,
+      "response_buffering" : false
+    }
+  } ],
+  "plugins" : [ {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "petstore-aws",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "/store/order",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getPets",
+    "configs" : {
+      "hide_credentials" : false
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "petstore-aws",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "/store/order",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "hmac-auth",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getPets",
+    "configs" : {
+      "hide_credentials" : false,
+      "validate_request_body" : false,
+      "clock_skew" : 300
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "serviceName" : "petstore-aws",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "/store/order",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "routeName" : "getPets",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "vidya-consumer",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "onprem",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "cons10",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "vidya",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "consumer1",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "kong-consumer",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "testing123",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  }, {
+    "pluginName" : "rate-limiting",
+    "enabled" : true,
+    "workspaceName" : "default",
+    "consumerName" : "tesrtewfewrfew",
+    "configs" : {
+      "second" : 2,
+      "minute" : 5,
+      "policy" : "cluster"
+    }
+  } ]
+}
